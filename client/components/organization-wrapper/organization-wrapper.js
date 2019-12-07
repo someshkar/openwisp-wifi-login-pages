@@ -16,6 +16,7 @@ import PasswordConfirm from "../password-confirm";
 import PasswordReset from "../password-reset";
 import Registration from "../registration";
 import Status from "../status";
+import PasswordChangePage from "../password-change/password-change-page";
 
 export default class OrganizationWrapper extends React.Component {
   constructor(props) {
@@ -90,8 +91,15 @@ export default class OrganizationWrapper extends React.Component {
               <Route
                 path={`${match.path}/status`}
                 render={() => {
-                  if (isAuthenticated) return <Status cookies={cookies} />;
-                  return <Redirect to={`/${orgSlug}/login`} />;
+                  // if (isAuthenticated) return <Status cookies={cookies} />;
+                  // return <Redirect to={`/${orgSlug}/login`} />;
+                  return <Status cookies={cookies} />;
+                }}
+              />
+              <Route
+                path={`${match.path}/change-password`}
+                render={() => {
+                  return <PasswordChangePage />;
                 }}
               />
               <Route

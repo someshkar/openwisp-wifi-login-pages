@@ -4,7 +4,7 @@ slug: "default"
 
 # configuration variables for the server app
 server:
-  host: "http://127.0.0.1:8000"
+  host: "http://ec2-18-191-159-195.us-east-2.compute.amazonaws.com:8000"
   proxy_urls:
     password_change: "/api/v1/{org_slug}/account/password/change"
     password_reset: "/api/v1/{org_slug}/account/password/reset"
@@ -128,7 +128,7 @@ client:
             en: "email"
       buttons:
         send:
-          en: 'Reset My Password'
+          en: "Reset My Password"
       contact_text:
         en: "Please contact us if you have any trouble resetting your password."
       login_page_link:
@@ -161,7 +161,7 @@ client:
             en: "confirm"
       buttons:
         submit:
-          en: 'change password'
+          en: "change password"
       contact_text:
         en: "Please contact us if you have any trouble resetting your password."
       login_page_link:
@@ -192,9 +192,9 @@ client:
     status_page:
       content:
         en: |
-           WiFi Login Successful!
-           You can now use the internet.
-           You may leave this page open in case you want to log out.
+          WiFi Login Successful!
+          You can now use the internet.
+          You may leave this page open in case you want to log out.
       buttons:
         logout:
           label: null
@@ -248,7 +248,7 @@ client:
           text:
             en: "Sign up"
       links:
-        forget_password :
+        forget_password:
           en: "Forgot your password?"
     404_page:
       heading:

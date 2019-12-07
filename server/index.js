@@ -14,7 +14,9 @@ app.use(cookieParser());
 app.use(cookiesMiddleware());
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
+
 app.use("/api/v1/:organization/account", routes.account);
+
 app.get("*", function(req, res) {
   res.sendFile(path.join(process.cwd(), "dist", "index.html"));
 });
